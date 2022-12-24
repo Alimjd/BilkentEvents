@@ -27,7 +27,7 @@ public class loginPage extends AppCompatActivity {
     Button login;
     DBHelper DB;
     TextView createaccount,forgot_password;
-    @Override
+    createAccount cAcc = new createAccount();
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
@@ -59,7 +59,6 @@ public class loginPage extends AppCompatActivity {
             public void onClick(View v) {
                 String em= email.getText().toString();
                 String pass = password.getText().toString();
-
                 if (TextUtils.isEmpty(em) || TextUtils.isEmpty(pass)){
                     Toast.makeText(loginPage.this,"All fields Required", Toast.LENGTH_SHORT).show();
                 }
